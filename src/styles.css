@@ -39,8 +39,14 @@ body {
   & > header {
     & > div {
       display: flex;
+      gap: 1em;
+      align-items: center;
     }
   }
+}
+.site-title {
+  flex-grow: 2;
+  font-size: 2vw;
 }
 
 .main-flow {

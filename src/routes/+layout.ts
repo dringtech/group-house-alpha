@@ -16,5 +16,14 @@ export const load = async ({ fetch, data, depends }) => {
     data: { session },
   } = await supabase.auth.getSession()
 
-  return { supabase, session }
+  let userDetails = undefined;
+  if (session) {
+    ({ data: userDetails } = await supabase
+      .from('profiles')
+      .select(`username, full_name, avatar_url`)
+      .eq('id', session.user.id)
+      .single())
+  }
+
+  return { supabase, session, userDetails }
 }
