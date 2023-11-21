@@ -32,11 +32,13 @@ body,
 }
 
 body {
-  padding: 1em;
+  padding: 0;
 }
 
 .app-container {
   & > header {
+    border-bottom: var(--custom-color-brand) 3px solid;
+    padding-block: 1em;
     & > div {
       display: flex;
       gap: 1em;
@@ -51,7 +53,8 @@ body {
 
 .main-flow {
   margin-inline: auto;
-  max-width: 80ch;
+  padding-inline: 1em;
+  max-width: 90ch;
 }
 
 a {
