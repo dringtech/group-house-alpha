@@ -28,7 +28,7 @@
 
 <header>
 	<div class="main-flow">
-		<div class="site-title">Group House</div>
+		<div class="site-title"><a href="/">Group House</a></div>
 		{#if session}
 			<div>
 				<a href="/account">
