@@ -23,14 +23,6 @@
 			loading = false
 		}
 	}
-
-	const handleSignOut: SubmitFunction = () => {
-		loading = true
-		return async ({ update }) => {
-			loading = false
-			update()
-		}
-	}
 </script>
 
 <div class="form-widget">
@@ -71,11 +63,5 @@
 		</div>
 	</form>
 
-	<form method="post" action="?/signout" use:enhance={handleSignOut}>
-		<div>
-			<button class="button" disabled={loading}>Sign Out</button>
-		</div>
-	</form>
-  
   <a class="button" href="/home">Close</a>
 </div>

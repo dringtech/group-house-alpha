@@ -11,7 +11,7 @@
   $: profile.set(data.profile)
 
   let loading = false
-    const handleSignOut: SubmitFunction = () => {
+  const handleSignOut: SubmitFunction = () => {
 		loading = true
 		return async ({ update }) => {
 			loading = false
@@ -24,13 +24,10 @@
   Logged in as <a href="/account">{$profile.username}</a>
 </p>
 
-<!-- <form method="post" action="?/signout" use:enhance={handleSignOut}>
+<form method="post" action="/auth/logout" use:enhance={handleSignOut}>
   <div>
     <button class="button" disabled={loading}>Sign Out</button>
   </div>
-</form> -->
-
-<a href="/signout">Signout</a>
-
+</form>
 
 <slot/>
