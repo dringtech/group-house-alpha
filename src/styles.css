@@ -33,10 +33,19 @@ body,
 
 body {
   padding: 1em;
-  & > :is(header, main) {
-    margin-inline: auto;
-    max-width: 80ch;
-  } 
+}
+
+.app-container {
+  & > header {
+    & > div {
+      display: flex;
+    }
+  }
+}
+
+.main-flow {
+  margin-inline: auto;
+  max-width: 80ch;
 }
 
 a {
