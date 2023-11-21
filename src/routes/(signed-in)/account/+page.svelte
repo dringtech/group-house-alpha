@@ -1,6 +1,7 @@
 <!-- src/routes/account/+page.svelte -->
 <script lang="ts">
-	import { enhance } from '$app/forms';
+  import { getContext } from 'svelte';
+  import { enhance } from '$app/forms';
 	import type { SubmitFunction } from '@sveltejs/kit';
 
 	export let data
@@ -75,4 +76,6 @@
 			<button class="button" disabled={loading}>Sign Out</button>
 		</div>
 	</form>
+  
+  <a class="button" href="/home">Close</a>
 </div>
