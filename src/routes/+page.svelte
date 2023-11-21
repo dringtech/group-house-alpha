@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<!-- src/routes/+page.svelte -->
+<script lang="ts">
+	import { Auth } from '@supabase/auth-ui-svelte'
+	import { ThemeSupa } from '@supabase/auth-ui-shared'
+
+	export let data
+</script>
+
+<Auth
+  supabaseClient={data.supabase}
+  view="magic_link"
+  redirectTo={`${data.url}/auth/callback`}
+  showLinks={false}
+  appearance={{ theme: ThemeSupa, style: { input: 'color: #fff' } }}
+/>
