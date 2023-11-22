@@ -4,7 +4,7 @@ export async function load ({ parent, params }) {
 
   const { data: track } = await supabase
     .from('tracks')
-    .select('name, notes, created_at')
+    .select('id, name, notes, created_at')
     .eq('id', id)
     .single();
 
